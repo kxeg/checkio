@@ -26,15 +26,12 @@ def checkio(text):
         if v == d.get(themax):
             L2.append(k)
     #replace this for solution
-    if len(L2) > 1:
-        for i in range(len(L2)-1):
-            for j in range(len(L2)-i-1):
-                if azlist.index(L2[j]) > azlist.index(L2[j+1]):
-                    L2[j], L2[j + 1] = L2[j + 1], L2[j]
-        minz = L2[0]
-    else:
-        minz = L2[0]
-    return minz
+    for i in range(len(L2)-1):
+        for j in range(len(L2)-i-1):
+            if azlist.index(L2[j]) > azlist.index(L2[j+1]):
+                L2[j], L2[j + 1] = L2[j + 1], L2[j]
+
+    return L2[0]
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
