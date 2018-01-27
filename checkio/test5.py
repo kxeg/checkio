@@ -18,7 +18,7 @@ def long_repeat(line):
     for i in data:
         L.append(len(i[0]))
 
-    return max(L,default = 0)
+    return max(L, default=0)
 
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
