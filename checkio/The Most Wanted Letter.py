@@ -12,7 +12,7 @@ def checkio(text):
     d = {}
     L2 = []
     text = text.lower()
-    for i in text :
+    for i in text:
         if i.isalpha()==True:
             d[i] = text.count(i)
     L = list(d.values())
